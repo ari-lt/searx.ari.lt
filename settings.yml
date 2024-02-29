@@ -162,7 +162,7 @@ outgoing:
   # max_request_timeout: 10.0
   # suffix of searx_useragent, could contain information like an email address
   # to the administrator
-  useragent_suffix: "ari.web.xyz@gmail.com"
+  useragent_suffix: "ari@ari.lt"
   # The maximum number of concurrent connections that may be established.
   pool_connections: 100
   # Allow the connection pool to maintain keep-alive connections below this
@@ -646,19 +646,19 @@ engines:
     categories: [videos, web]
     ddg_category: videos
     shortcut: ddv
-    disabled: false
+    disabled: true
 
   - name: duckduckgo news
     engine: duckduckgo_extra
     categories: [news, web]
     ddg_category: news
     shortcut: ddn
-    disabled: false
+    disabled: true
 
   - name: duckduckgo weather
     engine: duckduckgo_weather
     shortcut: ddw
-    disabled: false
+    disabled: true
 
   - name: apple maps
     engine: apple_maps
