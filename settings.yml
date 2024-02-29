@@ -2,23 +2,23 @@ general:
   # Debug mode, only for development. Is overwritten by ${SEARXNG_DEBUG}
   debug: false
   # displayed name
-  instance_name: "Ari::web -> SearxNG"
+  instance_name: "Ari::web -> SearXNG"
   # For example: https://example.com/privacy
-  privacypolicy_url: false
+  privacypolicy_url: https://ari.lt/privacy
   # use true to use your own donation page written in searx/info/en/donate.md
   # use false to disable the donation link
   donation_url: https://ari.lt/thanks
   # mailto:contact@example.com
-  contact_url: mailto:ari.web.xyz@gmail.com
+  contact_url: mailto:ari@ari.lt
   # record stats
-  enable_metrics: true
+  enable_metrics: false
 
 brand:
-  new_issue_url: https://github.com/ari-lt/searx.ari.lt/issues/new
+  new_issue_url: https://searx.ari.lt/git/issues/new
   docs_url: https://docs.searxng.org/
   public_instances: https://searx.space
   wiki_url: https://github.com/searxng/searxng/wiki
-  issue_url: https://github.com/ari-lt/searx.ari.lt/issues
+  issue_url: https://searx.ari.lt/git/issues
 
 search:
   # Filter results. 0: None, 1: Moderate, 2: Strict
@@ -319,7 +319,7 @@ engines:
     engine: apkmirror
     timeout: 4.0
     shortcut: apkm
-    disabled: false
+    disabled: true
 
   - name: apple app store
     engine: apple_app_store
@@ -387,7 +387,7 @@ engines:
   - name: bing
     engine: bing
     shortcut: bi
-    disabled: false
+    disabled: true
 
   - name: bing images
     engine: bing_images
@@ -410,7 +410,7 @@ engines:
     content_xpath: //article[@class="repo-summary"]/p
     categories: [it, repos]
     timeout: 4.0
-    disabled: false
+    disabled: true
     shortcut: bb
     about:
       website: https://bitbucket.org/
@@ -658,7 +658,7 @@ engines:
   - name: duckduckgo weather
     engine: duckduckgo_weather
     shortcut: ddw
-    disabled: true
+    disabled: false
 
   - name: apple maps
     engine: apple_maps
@@ -676,7 +676,7 @@ engines:
     engine: tineye
     shortcut: tin
     timeout: 9.0
-    disabled: false
+    disabled: true
 
   - name: etymonline
     engine: xpath
@@ -712,7 +712,7 @@ engines:
   - name: fdroid
     engine: fdroid
     shortcut: fd
-    disabled: false
+    disabled: true
 
   - name: flickr
     categories: images
@@ -731,7 +731,7 @@ engines:
     base_url: https://directory.fsf.org/
     search_type: title
     timeout: 5.0
-    disabled: false
+    disabled: true
     about:
       website: https://directory.fsf.org/
       wikidata_id: Q2470288
@@ -800,7 +800,7 @@ engines:
     content_query: description
     categories: [it, repos]
     shortcut: cb
-    disabled: false
+    disabled: true
     about:
       website: https://codeberg.org/
       wikidata_id:
@@ -809,7 +809,7 @@ engines:
       require_api_key: false
       results: JSON
 
-  - name: ari git
+  - name: ari.lt git
     engine: json_engine
     search_url: https://git.ari.lt/api/v1/repos/search?q={query}&limit=10
     url_query: html_url
@@ -976,7 +976,7 @@ engines:
       - https://inv.tux.pizza
     shortcut: iv
     timeout: 3.0
-    disabled: false
+    disabled: true
 
   - name: jisho
     engine: jisho
@@ -1212,7 +1212,7 @@ engines:
   - name: odysee
     engine: odysee
     shortcut: od
-    disabled: false
+    disabled: true
 
   - name: openairedatasets
     engine: json_engine
@@ -1574,7 +1574,7 @@ engines:
 
   - name: semantic scholar
     engine: semantic_scholar
-    disabled: false
+    disabled: true
     shortcut: se
 
   # Spotify needs API credentials
@@ -1882,7 +1882,7 @@ engines:
     engine: wolframalpha_noapi
     timeout: 6.0
     categories: general
-    disabled: false
+    disabled: true
 
   - name: dictzone
     engine: dictzone
@@ -2208,7 +2208,7 @@ engines:
     content_xpath: ./p
     first_page_num: 1
     categories: [it, repos]
-    disabled: false
+    disabled: true
     about:
       website: https://sr.ht
       wikidata_id: Q78514485
